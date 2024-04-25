@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { PhoneInput } from "@/components/ui/phone-input"
 
-export default function Register() {
+export default function RegisterPage() {
   return (
     <div className="h-screen w-full lg:grid lg:min-h-[600px] lg:grid-cols-2 xl:min-h-[800px] sm:flex sm:items-center justify-center">
       <div className="hidden bg-muted lg:block">

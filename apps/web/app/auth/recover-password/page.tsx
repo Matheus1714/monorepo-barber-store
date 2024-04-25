@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 
-export default function RecoverPassword() {
+export default function RecoverPasswordPage() {
   return (
     <div className="h-screen w-full lg:grid lg:min-h-[600px] lg:grid-cols-2 xl:min-h-[800px] sm:flex sm:items-center justify-center">
       <div className="hidden bg-muted lg:block">
