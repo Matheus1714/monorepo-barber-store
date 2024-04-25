@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 
-export default function Register() {
+export default function RecoverPassword() {
   return (
     <div className="h-screen w-full lg:grid lg:min-h-[600px] lg:grid-cols-2 xl:min-h-[800px] sm:flex sm:items-center justify-center">
       <div className="hidden bg-muted lg:block">
@@ -28,39 +28,12 @@ export default function Register() {
             />
           </div>
           <div className="grid gap-2 text-center">
-            <h1 className="text-3xl font-bold">Login</h1>
+            <h1 className="text-3xl font-bold">Nova Senha</h1>
             <p className="text-balance text-muted-foreground">
-              Realize o preenchimento das informações para completar o cadastro.
+              Digite uma nova senha
             </p>
           </div>
           <div className="grid gap-4">
-            <div className="grid gap-2">
-              <Label htmlFor="email">Nome</Label>
-              <Input
-                id="name"
-                type="text"
-                placeholder="Nome"
-                required
-              />
-            </div>
-            <div className="grid gap-2">
-              <Label htmlFor="email">Email</Label>
-              <Input
-                id="email"
-                type="email"
-                placeholder="m@example.com"
-                required
-              />
-            </div>
-            <div className="grid gap-2">
-              <Label htmlFor="email">Telefone</Label>
-              <Input
-                id="name"
-                type="text"
-                placeholder="(11) 11111-1111"
-                required
-              />
-            </div>
             <div className="grid gap-2">
               <div className="flex items-center">
                 <Label htmlFor="password">Senha</Label>
@@ -74,12 +47,12 @@ export default function Register() {
               <Input id="password" type="password" required />
             </div>
             <Button type="submit" className="w-full">
-              Cadastrar
+              Redefinir senha
             </Button>
           </div>
           <div className="mt-4 text-center text-sm">
             Já tem cadastro?{" "}
-            <Link href="/" className="underline">
+            <Link href="/auth" className="underline">
               Faça Login
             </Link>
           </div>
