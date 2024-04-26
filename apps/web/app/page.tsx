@@ -5,6 +5,7 @@ import { redirect } from 'next/navigation'
 import { useState } from 'react';
 
 export default function RootPage() {
+
   const [loading, setLoading] = useState(true);
 
   setTimeout(() => {
