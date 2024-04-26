@@ -1,10 +1,10 @@
 import { DashLayout } from "@/components/dash-layout"
 
-export default function HomePage() {
+export default function EmployeesPage() {
   return (
     <DashLayout
-      title="Página Inicial"
-      page="home"
+      title="Funcionários"
+      page="employees"
     >
       
     </DashLayout>
