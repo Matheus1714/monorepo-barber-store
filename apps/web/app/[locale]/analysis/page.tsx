@@ -100,18 +100,25 @@ const fakeData: Row[] = [
   }
 ];
 
-import {useFormatter} from 'next-intl';
+import { useFormatter } from 'next-intl';
 
-export default function EmployeesPage() {
+export default function AnalysePage() {
 
   const format = useFormatter();
   const dateTime = new Date('2020-11-20T10:36:01.516Z');
 
-  console.log(format.dateTime(dateTime, {
+  const dateFormat = (date: string) => format.dateTime(new Date(date), {
     year: 'numeric',
-    month: 'short',
+    month: 'numeric',
     day: 'numeric'
-  }))
+  })
+
+  const hourFormat = (date: string) => format.dateTime(new Date(date), {
+    hour: 'numeric',
+    minute: 'numeric'
+  })
+
+  const moneyFormat = (value: number) => format.number(value, {style: 'currency', currency: 'BRL'})
 
   const header: Header[] = [
     { name: 'Serviço' },
@@ -145,13 +152,13 @@ export default function EmployeesPage() {
                         {row.service}
                       </TableCell>
                       <TableCell>
-                        R$ {row.price}
+                        {moneyFormat(row.price)}
                       </TableCell>
                       <TableCell>
-                        {row.reservation}
+                        {dateFormat(row.reservation)}
                       </TableCell>
                       <TableCell>
-                        {row.reservation}
+                        {hourFormat(row.reservation)}
                       </TableCell>
                       <TableCell>
                         {row.chair}
