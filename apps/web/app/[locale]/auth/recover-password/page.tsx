@@ -33,7 +33,7 @@ export default function RecoverPasswordPage() {
       </div>
       <div className="mt-4 text-center text-sm">
         Já tem cadastro?{" "}
-        <Link href="/auth" className="underline">
+        <Link href="/pt/auth" className="underline">
           Faça Login
         </Link>
       </div>

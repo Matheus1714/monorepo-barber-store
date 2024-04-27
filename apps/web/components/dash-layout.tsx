@@ -33,11 +33,11 @@ export function DashLayout({ children, title, page }: {
     page: Pages,
 }) {
     const pageOptions = [
-        { name: 'Página Inicial', active: true, path: '/home', value: 'home', icon: <Home className="h-4 w-4" /> },
-        { name: 'Serviços', active: true, path: '/services', value: 'services', icon: <ShoppingCart className="h-4 w-4" /> },
-        { name: 'Histórico', active: true, path: '/history', value: 'history', icon: <BookOpenText className="h-4 w-4" /> },
-        { name: 'Funcionários', active: true, path: '/employees', value: 'employees', icon: <Users className="h-4 w-4" /> },
-        { name: 'Analítico', active: true, path: '/analysis', value: 'analysis', icon: <LineChart className="h-4 w-4" /> },
+        { name: 'Página Inicial', active: true, path: '/pt/home', value: 'home', icon: <Home className="h-4 w-4" /> },
+        { name: 'Serviços', active: true, path: '/pt/services', value: 'services', icon: <ShoppingCart className="h-4 w-4" /> },
+        { name: 'Histórico', active: true, path: '/pt/history', value: 'history', icon: <BookOpenText className="h-4 w-4" /> },
+        { name: 'Funcionários', active: true, path: '/pt/employees', value: 'employees', icon: <Users className="h-4 w-4" /> },
+        { name: 'Analítico', active: true, path: '/pt/analysis', value: 'analysis', icon: <LineChart className="h-4 w-4" /> },
     ]
 
     const headerStyle = {
@@ -78,7 +78,7 @@ export function DashLayout({ children, title, page }: {
           <div className="hidden border-r bg-muted/40 md:block">
             <div className="flex h-full max-h-screen flex-col gap-2">
               <div className="flex h-14 items-center border-b px-4 lg:h-[60px] lg:px-6">
-                <Link href="/home" className="flex items-center gap-2 font-semibold">
+                <Link href="/pt/home" className="flex items-center gap-2 font-semibold">
                     <Image
                         src="/logo.png"
                         alt="Image"

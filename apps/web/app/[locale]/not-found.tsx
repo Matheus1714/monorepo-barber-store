@@ -10,7 +10,7 @@ export default function NotFound() {
             </div>
             <div className="mt-4 text-center text-sm">
                 Volte para o login {" "}
-                <Link href="/auth" className="underline">
+                <Link href="/pt/auth" className="underline">
                     Login
                 </Link>
             </div>

@@ -100,7 +100,18 @@ const fakeData: Row[] = [
   }
 ];
 
+import {useFormatter} from 'next-intl';
+
 export default function EmployeesPage() {
+
+  const format = useFormatter();
+  const dateTime = new Date('2020-11-20T10:36:01.516Z');
+
+  console.log(format.dateTime(dateTime, {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric'
+  }))
 
   const header: Header[] = [
     { name: 'Serviço' },
@@ -119,7 +130,7 @@ export default function EmployeesPage() {
     >
       <main className="grid flex-1 items-start gap-4 sm:py-0 md:gap-8">
         <Card x-chunk="dashboard-06-chunk-0">
-          <CardContent>
+          <CardContent className="mt-4">
             <ScrollArea>
               <Table>
                 <TableHeader>
@@ -134,7 +145,7 @@ export default function EmployeesPage() {
                         {row.service}
                       </TableCell>
                       <TableCell>
-                        {row.price}
+                        R$ {row.price}
                       </TableCell>
                       <TableCell>
                         {row.reservation}

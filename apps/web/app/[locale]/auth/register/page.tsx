@@ -5,16 +5,25 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { AuthLayout } from "@/components/auth-layout"
 
-export default function LoginPage() {
+export default function RegisterPage() {
   return (
     <AuthLayout>
       <div className="grid gap-2 text-center">
-        <h1 className="text-3xl font-bold">Login</h1>
+        <h1 className="text-3xl font-bold">Cadastro</h1>
         <p className="text-balance text-muted-foreground">
-          Entre com seu email abaixo para entrar na sua conta
+          Realize o preenchimento das informações para completar o cadastro.
         </p>
       </div>
       <div className="grid gap-4">
+        <div className="grid gap-2">
+          <Label htmlFor="email">Nome</Label>
+          <Input
+            id="name"
+            type="text"
+            placeholder="Nome"
+            required
+          />
+        </div>
         <div className="grid gap-2">
           <Label htmlFor="email">Email</Label>
           <Input
@@ -25,25 +34,34 @@ export default function LoginPage() {
           />
         </div>
         <div className="grid gap-2">
+          <Label htmlFor="email">Telefone</Label>
+          <Input
+            id="name"
+            type="text"
+            placeholder="(11) 11111-1111"
+            required
+          />
+        </div>
+        <div className="grid gap-2">
           <div className="flex items-center">
             <Label htmlFor="password">Senha</Label>
-            <Link
-              href="/auth/forgot-password"
-              className="ml-auto inline-block text-sm underline"
-            >
-              Esqueceu a senha?
-            </Link>
+          </div>
+          <Input id="password" type="password" required />
+        </div>
+        <div className="grid gap-2">
+          <div className="flex items-center">
+            <Label htmlFor="password">Repetir Senha</Label>
           </div>
           <Input id="password" type="password" required />
         </div>
         <Button type="submit" className="w-full">
-          Login
+          Cadastrar
         </Button>
       </div>
       <div className="mt-4 text-center text-sm">
-        Não tem uma conta?{" "}
-        <Link href="/auth/register" className="underline">
-          Cadastre-se
+        Já tem cadastro?{" "}
+        <Link href="/pt/auth" className="underline">
+          Faça Login
         </Link>
       </div>
     </AuthLayout>
