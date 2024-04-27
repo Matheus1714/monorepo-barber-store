@@ -12,6 +12,8 @@ import {
   TableRow,
 } from "@/components/ui/table"
 
+import { Badge } from "@/components/ui/badge"
+
 import { DashLayout } from "@/components/dash-layout"
 import { randomUUID } from "crypto"
 
@@ -161,7 +163,7 @@ export default function AnalysePage() {
                         {hourFormat(row.reservation)}
                       </TableCell>
                       <TableCell>
-                        {row.chair}
+                      <Badge>{row.chair}</Badge>
                       </TableCell>
                     </TableRow>
                   )) }
