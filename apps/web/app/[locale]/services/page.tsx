@@ -1,6 +1,6 @@
 import { DashLayout } from "@/components/dash-layout"
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { useFormatter } from 'next-intl';
 import { randomUUID } from "crypto";
 import Image from "next/image"

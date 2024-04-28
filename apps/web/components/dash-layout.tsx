@@ -36,8 +36,6 @@ export function DashLayout({ children, title, page }: {
         { name: 'Página Inicial', active: true, path: '/pt/home', value: 'home', icon: <Home className="h-4 w-4" /> },
         { name: 'Serviços', active: true, path: '/pt/services', value: 'services', icon: <ShoppingCart className="h-4 w-4" /> },
         { name: 'Histórico', active: true, path: '/pt/history', value: 'history', icon: <BookOpenText className="h-4 w-4" /> },
-        { name: 'Funcionários', active: true, path: '/pt/employees', value: 'employees', icon: <Users className="h-4 w-4" /> },
-        { name: 'Analítico', active: true, path: '/pt/analysis', value: 'analysis', icon: <LineChart className="h-4 w-4" /> },
     ]
 
     const headerStyle = {
@@ -145,11 +143,6 @@ export function DashLayout({ children, title, page }: {
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end">
-                  <DropdownMenuLabel>Minha Conta</DropdownMenuLabel>
-                  <DropdownMenuSeparator />
-                  <DropdownMenuItem>Configurações</DropdownMenuItem>
-                  <DropdownMenuItem>Suporte</DropdownMenuItem>
-                  <DropdownMenuSeparator />
                   <DropdownMenuItem>Sair</DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>

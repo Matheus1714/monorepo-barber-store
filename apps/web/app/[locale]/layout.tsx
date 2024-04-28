@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
 import { NextIntlClientProvider } from 'next-intl';
+import { Toaster } from "@/components/ui/toaster"
 
 import { cn } from "../../lib/utils"
  
@@ -34,6 +35,7 @@ export default function LocaleLayout({
           locale={locale}
         >
           {children}
+          <Toaster />
         </NextIntlClientProvider>
       </body>
     </html>
