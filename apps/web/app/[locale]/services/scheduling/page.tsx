@@ -9,7 +9,7 @@ import { Badge } from '@/components/ui/badge';
 import { capitalize, formatListOfItems } from '@/utils/format';
 import { Label } from '@/components/ui/label';
 import Image from 'next/image';
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { Button } from '@/components/ui/button';
 import { CalendarIcon } from 'lucide-react';
