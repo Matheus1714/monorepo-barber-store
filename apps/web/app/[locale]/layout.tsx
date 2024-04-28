@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
+import { NextIntlClientProvider } from 'next-intl';
+import { Toaster } from "@/components/ui/toaster"
 
-import { cn } from "../lib/utils"
+import { cn } from "../../lib/utils"
  
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -14,19 +16,28 @@ export const metadata: Metadata = {
   description: "Barbearia",
 };
 
-export default function RootLayout({
+export default function LocaleLayout({
   children,
+  params: {locale}
 }: Readonly<{
   children: React.ReactNode;
+  params: {locale: string};
 }>) {
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
           fontSans.variable
         )}
-      >{children}</body>
+      >
+        <NextIntlClientProvider
+          locale={locale}
+        >
+          {children}
+          <Toaster />
+        </NextIntlClientProvider>
+      </body>
     </html>
   );
 }

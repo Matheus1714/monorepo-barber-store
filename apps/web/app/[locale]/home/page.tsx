@@ -1,10 +1,11 @@
 import { DashLayout } from "@/components/dash-layout"
+import Image from "next/image"
 
-export default function ServicePage() {
+export default function HomePage() {
   return (
     <DashLayout
-      title="Serviços"
-      page="services"
+      title="Bem vindo!"
+      page="home"
     >
       
     </DashLayout>
