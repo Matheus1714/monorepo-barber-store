@@ -2,7 +2,7 @@
 
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import { Form, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { z } from "zod"
 import { useToast } from "@/components/ui/use-toast"
 
@@ -36,7 +36,7 @@ export default function LoginPage() {
     toast({
       title: "Login realizado com sucesso!",
     })
-}
+  }
 
   return (
     <AuthLayout>
