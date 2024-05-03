@@ -4,13 +4,7 @@ import { Loading } from '@/components/loading';
 import { redirect } from 'next/navigation'
 import { useState } from 'react';
 
-export interface RootPageProps {
-  params: {
-    locale: string;
-  }
-}
-
-export default function RootPage(props: RootPageProps) {
+export default function RootPage() {
 
   const [loading, setLoading] = useState(true);
 
@@ -20,5 +14,5 @@ export default function RootPage(props: RootPageProps) {
 
   if (loading) return <Loading />
 
-  redirect(`${props.params.locale}/auth`)
+  redirect(`pt/auth`)
 }

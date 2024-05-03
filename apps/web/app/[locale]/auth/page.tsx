@@ -6,11 +6,10 @@ import { Form, FormField, FormItem, FormLabel, FormMessage } from '@/components/
 import { z } from "zod"
 import { useToast } from "@/components/ui/use-toast"
 
-import Link from "next/link"
-
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { AuthLayout } from "@/components/auth-layout"
+import { NavigationLink } from "@/components/navigation-link";
 
 const FormSchema = z.object({
   email: z.string({
@@ -80,12 +79,12 @@ export default function LoginPage() {
                     defaultValue={field.value}
                   />
                   <FormMessage />
-                  <Link
-                    href="/pt/auth/forgot-password"
+                  <NavigationLink
+                    href="/auth/forgot-password"
                     className="ml-auto inline-block text-sm underline"
                   >
                     Esqueceu a senha?
-                  </Link>
+                  </NavigationLink>
                 </FormItem>
               )}
             />
@@ -98,12 +97,12 @@ export default function LoginPage() {
       </Form>
       <div className="mt-4 text-center text-sm">
         Não tem uma conta?{" "}
-        <Link 
-          href="/pt/auth/register"
+        <NavigationLink 
+          href="/auth/register"
           className="underline"
         >
           Cadastre-se
-        </Link>
+        </NavigationLink>
       </div>
     </AuthLayout>
   )

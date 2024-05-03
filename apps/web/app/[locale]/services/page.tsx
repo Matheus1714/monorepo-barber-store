@@ -5,7 +5,7 @@ import { useFormatter } from 'next-intl';
 import { randomUUID } from "crypto";
 import Image from "next/image"
 import { Label } from "@/components/ui/label";
-import Link from "next/link";
+import { NavigationLink } from "@/components/navigation-link";
 
 interface Row {
   id: string;
@@ -24,7 +24,7 @@ interface Row {
 const fakeData = [
   {
     id: randomUUID(),
-    pathname: '/pt/services/scheduling',
+    pathname: '/services/scheduling',
     service: {
       name: 'Barba',
       value: ['barba'],
@@ -37,7 +37,7 @@ const fakeData = [
   },
   {
     id: randomUUID(),
-    pathname: '/pt/services/scheduling',
+    pathname: '/services/scheduling',
     service: {
       name: 'Cabelo',
       value: ['cabelo'],
@@ -50,7 +50,7 @@ const fakeData = [
   },
   {
     id: randomUUID(),
-    pathname: '/pt/services/scheduling',
+    pathname: '/services/scheduling',
     service: {
       name: 'Cabelo e Barba',
       value: ['barba', 'cabelo'],
@@ -77,7 +77,7 @@ export default function ServicePage() {
     >
       <div className="grid gap-4 sm:flex sm: flex-wrap">
         { rows.map((row) => (
-          <Link 
+          <NavigationLink 
             key={row.id}
             href={{
               pathname: row.pathname,
@@ -108,7 +108,7 @@ export default function ServicePage() {
                 </Label>
               </CardHeader>
             </Card>
-          </Link>
+          </NavigationLink>
         )) }
       </div>
     </DashLayout>

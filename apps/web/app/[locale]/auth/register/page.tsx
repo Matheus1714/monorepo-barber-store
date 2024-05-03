@@ -6,12 +6,11 @@ import { Form, FormField, FormItem, FormLabel, FormMessage } from '@/components/
 import { z } from "zod"
 import { useToast } from "@/components/ui/use-toast"
 
-import Link from "next/link"
-
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { AuthLayout } from "@/components/auth-layout"
 import { PhoneInput } from "@/components/ui/phone-input";
+import { NavigationLink } from "@/components/navigation-link";
 
 const FormSchema = z.object({
   name: z.string({
@@ -151,9 +150,9 @@ export default function RegisterPage() {
       </Form>
       <div className="mt-4 text-center text-sm">
         Já tem cadastro?{" "}
-        <Link href="/pt/auth" className="underline">
+        <NavigationLink href="/auth" className="underline">
           Faça Login
-        </Link>
+        </NavigationLink>
       </div>
     </AuthLayout>
   )

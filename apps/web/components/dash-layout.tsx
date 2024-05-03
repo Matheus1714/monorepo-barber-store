@@ -1,6 +1,4 @@
 import { ReactNode } from 'react'
-
-import Link from "next/link"
 import Image from "next/image"
 import {
   CircleUser,
@@ -24,6 +22,7 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { Input } from "@/components/ui/input"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { NavigationLink } from './navigation-link'
 
 export type Pages = 'home' | 'services' | 'history' | 'employees' | 'analysis'
 
@@ -33,9 +32,9 @@ export function DashLayout({ children, title, page }: {
     page: Pages,
 }) {
     const pageOptions = [
-        { name: 'Página Inicial', active: true, path: '/pt/home', value: 'home', icon: <Home className="h-4 w-4" /> },
-        { name: 'Serviços', active: true, path: '/pt/services', value: 'services', icon: <ShoppingCart className="h-4 w-4" /> },
-        { name: 'Histórico', active: true, path: '/pt/history', value: 'history', icon: <BookOpenText className="h-4 w-4" /> },
+        { name: 'Página Inicial', active: true, path: '/home', value: 'home', icon: <Home className="h-4 w-4" /> },
+        { name: 'Serviços', active: true, path: '/services', value: 'services', icon: <ShoppingCart className="h-4 w-4" /> },
+        { name: 'Histórico', active: true, path: '/history', value: 'history', icon: <BookOpenText className="h-4 w-4" /> },
     ]
 
     const headerStyle = {
@@ -50,25 +49,25 @@ export function DashLayout({ children, title, page }: {
     }
 
     const desktopOptions = pageOptions.map((pageOption) => (
-        <Link
+        <NavigationLink
             key={pageOption.name}
             href={pageOption.path}
             className={page === pageOption.value ? headerStyle.desktop.active : headerStyle.desktop.default}
             >
             { pageOption.icon }
             { pageOption.name }
-        </Link>
+        </NavigationLink>
     ));
 
     const cellphoneOptions = pageOptions.map((pageOption) => (
-        <Link
+        <NavigationLink
             key={pageOption.name}
             href={pageOption.path}
             className={page === pageOption.value ? headerStyle.cellphone.active : headerStyle.cellphone.default}
             >
             { pageOption.icon }
             { pageOption.name }
-        </Link>
+        </NavigationLink>
     ));
 
     return (
@@ -76,7 +75,7 @@ export function DashLayout({ children, title, page }: {
           <div className="hidden border-r bg-muted/40 md:block">
             <div className="flex h-full max-h-screen flex-col gap-2">
               <div className="flex h-14 items-center border-b px-4 lg:h-[60px] lg:px-6">
-                <Link href="/pt/home" className="flex items-center gap-2 font-semibold">
+                <NavigationLink href="/home" className="flex items-center gap-2 font-semibold">
                     <Image
                         src="/logo.png"
                         alt="Image"
@@ -84,7 +83,7 @@ export function DashLayout({ children, title, page }: {
                         height="141"
                         priority
                     />
-                </Link>
+                </NavigationLink>
               </div>
               <div className="flex-1">
                 <nav className="grid items-start px-2 text-sm font-medium lg:px-4">
@@ -108,7 +107,7 @@ export function DashLayout({ children, title, page }: {
                 </SheetTrigger>
                 <SheetContent side="left" className="flex flex-col">
                   <nav className="grid gap-2 text-lg font-medium">
-                    <Link
+                    <NavigationLink
                       href="#"
                       className="flex items-center gap-2 text-lg font-semibold"
                     >
@@ -118,7 +117,7 @@ export function DashLayout({ children, title, page }: {
                         width="491"
                         height="141"
                         />
-                    </Link>
+                    </NavigationLink>
                     { cellphoneOptions }
                   </nav>
                 </SheetContent>
