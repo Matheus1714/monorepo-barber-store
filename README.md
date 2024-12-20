@@ -2,13 +2,14 @@
 
 [Autenticação](https://monorepo-barber-store-web.vercel.app/pt/auth)
 
-![image](https://github.com/user-attachments/assets/329c18f7-d814-40bd-827c-2a91d3339367)
+![Captura de tela 2024-12-20 134601](https://github.com/user-attachments/assets/9d613f47-72cb-4c6a-bf55-24d472d8d442)
 
 [Registro](https://monorepo-barber-store-web.vercel.app/pt/auth/register)
 
-![image](https://github.com/user-attachments/assets/2f5cf342-2f10-4e7c-9cba-e948a672b1aa)
+![Captura de tela 2024-12-20 134717](https://github.com/user-attachments/assets/a42e4fa6-c73a-4920-8f22-aaee7ef360dc)
 
 [Serviços](https://monorepo-barber-store-web.vercel.app/pt/services)
 
-![image](https://github.com/user-attachments/assets/70683853-3d40-4d0d-aaaf-5ac3e100c721)
+![Captura de tela 2024-12-20 134827](https://github.com/user-attachments/assets/ee1aaab9-7587-4595-ae81-fe8dad5943ee)
+
 
